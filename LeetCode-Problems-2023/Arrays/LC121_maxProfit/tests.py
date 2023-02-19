@@ -14,6 +14,8 @@ class ArrayTests(unittest.TestCase):
         """maxProfit([7, 6, 4, 3, 1]) --> 0"""
         self.assertEqual(obj.maxProfit([7, 6, 4, 3, 1]), 0)
 
-
+    def test_3(self):
+        self.assertEqual(obj.maxProfit([2,1,4]), 3)
+        
 if __name__ == '__main__':
     unittest.main()
