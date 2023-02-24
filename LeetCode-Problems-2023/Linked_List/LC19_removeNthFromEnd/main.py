@@ -6,3 +6,25 @@ class ListNode:
 
 class Solution:
     def removeNthFromEnd(self, head, n):
+        
+        dummy_head = ListNode("placeholder")
+        dummy_head.next = head 
+        
+        
+        slow = dummy_head  
+        fast = dummy_head  
+       
+        while n > 0:
+           fast = fast.next 
+           n -= 1
+
+        while fast.next:
+            slow = slow.next 
+            fast = fast.next 
+        
+        slow.next = slow.next.next
+        
+        return dummy_head.next
+    
+        
+           
